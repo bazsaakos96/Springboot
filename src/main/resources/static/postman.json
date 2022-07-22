@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "d491338b-97b5-44e7-bcea-8bf34f5e35ee",
+		"name": "Coursereg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20791858"
+	},
+	"item": [
+		{
+			"name": "addStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"proba@email.hu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/addStudent",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"addStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCourse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"IT kurzus\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/addCourse",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"addCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCourseRegistration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"student_id\":1,\r\n   \"course_id\":1,\r\n   \"power\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/addCourseRegistration",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"addCourseRegistration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/updateStudent?student_id=1&email=proba@emailupdated.hu",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"updateStudent"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "1"
+						},
+						{
+							"key": "email",
+							"value": "proba@emailupdated.hu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/updateProfile?profile_id=1&age=95&name=István",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"updateProfile"
+					],
+					"query": [
+						{
+							"key": "profile_id",
+							"value": "1"
+						},
+						{
+							"key": "age",
+							"value": "95"
+						},
+						{
+							"key": "name",
+							"value": "István"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCourse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/updateCourse?course_id=1&name=IT kurzus updated",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"updateCourse"
+					],
+					"query": [
+						{
+							"key": "course_id",
+							"value": "1"
+						},
+						{
+							"key": "name",
+							"value": "IT kurzus updated"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCourseRegistration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/updateCourseRegistration?courseregistration_id=1&power=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"updateCourseRegistration"
+					],
+					"query": [
+						{
+							"key": "courseregistration_id",
+							"value": "1"
+						},
+						{
+							"key": "power",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCourseRegistration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"student_id\":1,\r\n    \"course_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/deleteCourseRegistration?courseregistration_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"deleteCourseRegistration"
+					],
+					"query": [
+						{
+							"key": "courseregistration_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/deleteStudent?student_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"deleteStudent"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCourse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"course_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/deleteCourse?course_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"deleteCourse"
+					],
+					"query": [
+						{
+							"key": "course_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllStudent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "html"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/getAllStudent",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"getAllStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCourse",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "html"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/getAllCourse",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"getAllCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCourseRegistration",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "html"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/getAllCourseRegistration",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"getAllCourseRegistration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProfileById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/getProfile?profile_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"getProfile"
+					],
+					"query": [
+						{
+							"key": "profile_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

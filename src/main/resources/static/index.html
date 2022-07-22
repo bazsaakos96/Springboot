@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        JSON küldése a szervernek
+    </title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <style>
+        .noborder{
+            border: none;
+        }
+        div {
+            border: 1px solid green;
+            border-radius: 5px;
+            margin: 5px;
+            padding:5px;
+        }
+        table, td, th {
+            border:none;
+            margin: 5px;
+        }
+
+        table {
+            width: 99%;
+            padding: 1px;
+            margin: 1px;
+        }
+        input{
+            border: 1px solid gray;
+            border-radius: 4px;
+            text-align: center;
+            padding: 6px;
+        }
+        button{
+            border: 1px solid gray;
+            border-radius: 4px;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body style="text-align:center" id="body" onload="loadPages()">
+<h3 style="color: green">Spring Boot alkalmazás</h3>
+<div class="noborder" id="description" style=" width:96%; text-align: justify; padding: 10px"></div>
+
+    <div style="float:left; width: 55%">
+        <div class="noborder" style="float:left; align-content: center; width: 98%; background-color:aqua" id="getallstudent"></div>
+        <div class="noborder" style="padding:0px; float:left; align-content: center; width: 98%; background-color:aqua" id="getprofile"></div>
+        <div class="noborder" style="float:left; align-content: center; width: 98%">
+            <h5 style="color:green;">Tanuló felvétel</h5>
+            Tanuló E-mail címe:
+            <input type="email" id="email" name="email" placeholder="E-mail" value="proba@email.hu">
+            <button onclick="addStudent()">Felvesz</button>
+            <br><small>Egy e-mail cím csak egyszer szerepelhet az adatbázisban</small>
+        </div>
+    </div>
+
+
+    <div  style="float:left; width: 40%">
+        <div class="noborder" style="float:right; width:96%; background-color: aqua" id="getallcourse"></div>
+        <div class="noborder" style="float:right; width:96%;">
+            <h5 style="color:green">Kurzus felvétel</h5>
+            Kurzus név:<input type="text" id="coursename" name="coursename" placeholder="Course name" value="IT kurzus">
+            <button onclick="addCourse()">Felvesz</button>
+            <br><small>Egy kurzus csak egyszer szerepelhet az adatbázisban</small>
+
+        </div>
+    </div>
+
+    <div style="float:left; width: 96%">
+        <!--Add CourseRegistration-->
+        <h5 style="color:green;">Kurzus tanulóhoz rendelésehez válasszon ki két elemet!</h5>
+        Tanuló id:<input type="number" id="student_id" name="student_id" placeholder="student id" value="">
+        Kurzus id:<input type="number" id="course_id" name="course_id" placeholder="course id" value="">
+        <input type="hidden" id="power" name="power" placeholder="jegy" value="0" readonly>
+        <button onclick="addCourseReg()">Összekapcsolás</button>
+        <div class="noborder" style="float:left; width: 99%; margin-top: 11px; background-color: aqua" id="getallcourseregistrations"></div>
+    </div>
+</body>
+</html>
